@@ -13,7 +13,7 @@ const defaultProjects = [
             id: 2,
             title: "E-Commerce Platform",
             category: "Major Project",
-            image: "images/iot.jpg",
+            image: "images/plc.jpg",
             tech: ["MongoDB", "Express", "React", "Node.js", "Stripe API"],
             desc: "A fully scaled, secure e-commerce web application featuring modern layout patterns, secure payment pipelines, user sessions, product filters, administrative dashboards, and order status monitors.",
             difficulty: "Intermediate to Advanced",
