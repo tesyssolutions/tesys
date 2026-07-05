@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | VNCK Academia</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-group admin-logo-link">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span class="logo-text">VNCK <span class="highlight">Academia</span></span>
+            </a>
+
+            <div class="desktop-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="admin.html" class="btn btn-primary btn-sm">Admin</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="index.html#home" class="mobile-link">Home</a>
+            <a href="index.html#projects" class="mobile-link">Projects</a>
+            <a href="index.html#contact" class="mobile-link">Contact</a>
+            <a href="admin.html" class="mobile-link">Admin</a>
+        </div>
+    </nav>
+
+    <!-- Admin Login & Project Add Section -->
+    <main id="admin" class="admin-section admin-page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Admin Project Manager</h2>
+				<div class="accent-line"></div>
+                <p>Login with username <strong>admin</strong> and password <strong>admin</strong> to add projects to the website.</p>
+            </div>
+
+            <div id="admin-login-card" class="admin-card">
+                <h3>Admin Login</h3>
+                <form id="admin-login-form">
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="admin-username">Username</label>
+                            <input type="text" id="admin-username" required placeholder="admin">
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-password">Password</label>
+                            <input type="password" id="admin-password" required placeholder="admin">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                </form>
+            </div>
+
+            <div id="admin-panel" class="admin-card hidden">
+                <div class="admin-panel-header">
+                    <div>
+                        <h3>Add New Project</h3>
+                        <p>Fill all details and submit. The project will show on the normal website page.</p>
+                    </div>
+                    <div class="admin-actions">
+                        <a href="index.html#projects" class="btn btn-outline btn-sm">View Website</a>
+                        <button id="admin-logout-btn" type="button" class="btn btn-outline btn-sm">Logout</button>
+                    </div>
+                </div>
+
+                <form id="project-form">
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="project-title">Project Title</label>
+                            <input type="text" id="project-title" required placeholder="Project title">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-category">Category</label>
+                            <select id="project-category" required>
+                                <option value="Major Project">Major Project</option>
+                                <option value="Mini Project">Mini Project</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-image">Image URL / Path</label>
+                        <input type="text" id="project-image" required placeholder="doc/project/image.jpg or https://...">
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="project-tech">Technology</label>
+                            <input type="text" id="project-tech" required placeholder="HTML, CSS, JavaScript, ESP32">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-difficulty">Difficulty</label>
+                            <input type="text" id="project-difficulty" required placeholder="Beginner / Advanced">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-duration">Duration</label>
+                        <input type="text" id="project-duration" required placeholder="6 Weeks">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-desc">Description</label>
+                        <textarea id="project-desc" rows="5" required placeholder="Project description"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg">Add Project</button>
+					
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Custom Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- Admin JS Logic -->
+    <script src="admin.js"></script>
+</body>
+</html>
