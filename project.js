@@ -3,7 +3,7 @@ const defaultProjects = [
             id: 1,
             title: "PRO#0001: IoT based Underground Cable Fault Detection",
             category: "Major Project",
-            image: "images/iot.jpg",
+            image: "/images/iot.jpg",
             tech: ["ESP32 / C++", "HTML", "CSS", "JS"],
             desc: "An automated underground cable fault detection system utilizing ESP32 microcontrollers. Data is pushed in real-time to a cloud database and visualized on a dynamic web dashboard.",
             difficulty: "Advanced",
