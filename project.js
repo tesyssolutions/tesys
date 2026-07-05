@@ -1,13 +1,13 @@
 const defaultProjects = [
         {
             id: 1,
-            title: "PRO#0001: IoT based Underground Cable Fault Detection",
+            title: "E-Commerce Platform",
             category: "Major Project",
             image: "images/plc.jpg",
-            tech: ["ESP32 / C++", "HTML", "CSS", "JS"],
-            desc: "An automated underground cable fault detection system utilizing ESP32 microcontrollers. Data is pushed in real-time to a cloud database and visualized on a dynamic web dashboard.",
-            difficulty: "Advanced",
-            duration: "6 Weeks"
+            tech: ["MongoDB", "Express", "React", "Node.js", "Stripe API"],
+            desc: "A fully scaled, secure e-commerce web application featuring modern layout patterns, secure payment pipelines, user sessions, product filters, administrative dashboards, and order status monitors.",
+            difficulty: "Intermediate to Advanced",
+            duration: "8 Weeks"
         },
         {
             id: 2,
